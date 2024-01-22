@@ -143,10 +143,10 @@ docker-compose up -d
 
 ## 截图
 ### Web 管理页面
-![Web 管理页面图片](https://github.com/pjialin/py12306/blob/master/data/images/web.png)
+![Web 管理页面图片](data/images/web.png)
 
 ### 下单成功
-![下单成功图片](https://github.com/pjialin/py12306/blob/master/data/images/order_success.png)
+![下单成功图片](/data/images/order_success.png)
 
 ### 关于防封
 目前查询和登录操作是分开的，查询是不依赖用户是否登录，放在 A 云 T 云容易被限制 ip，建议在其它网络环境下运行
