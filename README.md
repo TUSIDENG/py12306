@@ -83,6 +83,8 @@ python main.py
 
 
 ## Docker 使用
+
+### 已经搭建好的容器镜像
 **1. 将配置文件下载到本地**
 ```bash
 docker run --rm pjialin/py12306 cat /config/env.py > env.py
@@ -95,6 +97,12 @@ curl https://raw.githubusercontent.com/pjialin/py12306/master/env.docker.py.exam
 docker run --rm --name py12306 -p 8008:8008 -d -v $(pwd):/config -v py12306:/data pjialin/py12306
 ```
 当前目录会多一个 12306.log 的日志文件， `tail -f 12306.log`
+
+### 自己基于dockerfile构建的容器镜像
+代码不放在容器里，防止更改代码后，就需要重新构建
+```bash
+docker run --name py12306 -p 8008:8008  -v .:/code py12306-py12306
+```
 
 ### Docker-compose 中使用
 **1. 复制配置文件**
